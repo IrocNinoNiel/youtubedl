@@ -1,3 +1,6 @@
+const ytdl = require("ytdl-core");
+const fs = require("fs");
+
 const express = require("express");
 const { success, error } = require("consola");
 const http = require('http');
