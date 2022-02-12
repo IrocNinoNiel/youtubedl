@@ -6,3 +6,4 @@ node_modules/
 
 #MP4 files
 *.mp4
+video/

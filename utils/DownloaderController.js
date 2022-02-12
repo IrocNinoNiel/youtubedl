@@ -5,9 +5,10 @@ const DownloadVideo = async (req, res) => {
     try{
 
         const { url } = req.body;
-
+        let info = await ytdl.getInfo(url);
+        
         ytdl(url)
-            .pipe(fs.createWriteStream('video.mp4'));
+            .pipe(fs.createWriteStream(`video/${info.videoDetails.title}.mp4`));
 
         
         res.json({
